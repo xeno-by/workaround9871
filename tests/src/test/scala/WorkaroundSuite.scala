@@ -1,4 +1,4 @@
-package by.xeno.workaround9871
+package com.github.xenoby.workaround9871
 
 import org.scalatest._
 import scala.compat.Platform.EOL
@@ -13,9 +13,9 @@ class CompilationSuite extends FunSuite {
     val compilationResult = compile(problematic)
     assert(compilationResult === """
       |ERROR ambiguous reference to overloaded definition,
-      |both method foo in object Test of type (x: by.xeno.workaround9871.MyFunction1[Int,Int])String
+      |both method foo in object Test of type (x: com.github.xenoby.workaround9871.MyFunction1[Int,Int])String
       |and  method foo in object Test of type (x: Int => Int)String
-      |match argument types (by.xeno.workaround9871.MyFunction1[Int,Int])
+      |match argument types (com.github.xenoby.workaround9871.MyFunction1[Int,Int])
     """.trim.stripMargin)
   }
 

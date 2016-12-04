@@ -69,6 +69,6 @@ object Test {
 Enjoy!
 
 ```scala
-addCompilerPlugin("by.xeno" % "workaround9871" % "1.0.0" cross CrossVersion.full)
+addCompilerPlugin("com.github.xenoby" % "workaround9871" % "1.0.0" cross CrossVersion.full)
 ```
 

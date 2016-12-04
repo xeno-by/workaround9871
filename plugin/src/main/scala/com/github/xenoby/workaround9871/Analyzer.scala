@@ -1,4 +1,4 @@
-package by.xeno.workaround9871
+package com.github.xenoby.workaround9871
 
 import scala.tools.nsc.typechecker.{Analyzer => NscAnalyzer}
 

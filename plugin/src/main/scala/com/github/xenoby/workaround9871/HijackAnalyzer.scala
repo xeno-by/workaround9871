@@ -1,10 +1,10 @@
-package by.xeno.workaround9871
+package com.github.xenoby.workaround9871
 
 import scala.collection.mutable
 import scala.tools.nsc.{Global => NscGlobal, SubComponent}
-import by.xeno.workaround9871.{Plugin => Workaround9871Plugin}
+import com.github.xenoby.workaround9871.{Plugin => Workaround9871Plugin}
 import scala.tools.nsc.typechecker.{Analyzer => NscAnalyzer}
-import by.xeno.workaround9871.{Analyzer => Workaround9871Analyzer}
+import com.github.xenoby.workaround9871.{Analyzer => Workaround9871Analyzer}
 import scala.tools.nsc.interpreter.{ReplGlobal => NscReplGlobal}
 import scala.tools.nsc.interactive.{Global => NscInteractiveGlobal, InteractiveAnalyzer => NscInteractiveAnalyzer}
 

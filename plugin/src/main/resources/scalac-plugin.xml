@@ -1,0 +1,4 @@
+<plugin>
+  <name>workaround9871</name>
+  <classname>com.github.xenoby.workaround9871.Plugin</classname>
+</plugin>

@@ -20,7 +20,6 @@ lazy val plugin = Project(
   sharedSettings : _*
 ) settings (
   description := "Works around SI-9871",
-  resourceDirectory in Compile := baseDirectory.value / "src" / "main" / "scala" / "by" / "xeno" / "workaround9871" / "embedded",
   libraryDependencies += "org.scala-lang" % "scala-compiler" % scalaVersion.value,
   publishArtifact in Compile := true,
   publishTo := {
@@ -76,7 +75,7 @@ lazy val sharedSettings = Seq(
   crossScalaVersions := ScalaVersions,
   crossVersion := CrossVersion.full,
   version := PluginVersion,
-  organization := "by.xeno",
+  organization := "com.github.xenoby",
   resolvers += Resolver.sonatypeRepo("releases"),
   publishMavenStyle := true,
   publishArtifact in Compile := false,
