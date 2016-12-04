@@ -69,6 +69,8 @@ object Test {
 Enjoy!
 
 ```scala
+resolvers += Resolver.sonatypeRepo("releases")
+
 addCompilerPlugin("com.github.xenoby" % "workaround9871" % "1.0.0" cross CrossVersion.full)
 ```
 
