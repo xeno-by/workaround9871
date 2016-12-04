@@ -13,14 +13,15 @@ class CompilationSuite extends FunSuite {
     val compilationResult = compile(problematic)
     assert(compilationResult === """
       |ERROR ambiguous reference to overloaded definition,
-      |both method foo in object Test of type (x: MyFunction1[Int,Int])Nothing
-      |and  method foo in object Test of type (x: Int => Int)Nothing
-      |match argument types (MyFunction1[Int,Int])
+      |both method foo in object Test of type (x: by.xeno.workaround9871.MyFunction1[Int,Int])String
+      |and  method foo in object Test of type (x: Int => Int)String
+      |match argument types (by.xeno.workaround9871.MyFunction1[Int,Int])
     """.trim.stripMargin)
   }
 
-  test("problematic code compiles with the plugin") {
+  test("problematic code compiles with the plugin and picks the correct overload") {
     // see tests/src/main/scala
+    assert(Test.test() === "correct")
   }
 
   test("normal code compiles with the plugin") {

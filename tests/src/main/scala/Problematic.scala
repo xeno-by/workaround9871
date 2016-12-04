@@ -6,13 +6,17 @@ package scala.annotation {
   class notASam extends StaticAnnotation
 }
 
-@scala.annotation.notASam
-abstract class MyFunction1[T, U] extends Function1[T, U]
+package by.xeno.workaround9871 {
+  @scala.annotation.notASam
+  abstract class MyFunction1[T, U] extends Function1[T, U]
 
-object Test {
-  def foo(x: Function1[Int, Int]) = ???
-  def foo(x: MyFunction1[Int, Int]) = ???
+  object Test {
+    def foo(x: Function1[Int, Int]) = "incorrect"
+    def foo(x: MyFunction1[Int, Int]) = "correct"
 
-  val myf: MyFunction1[Int, Int] = ???
-  foo(myf)
+    def test() = {
+      val myf: MyFunction1[Int, Int] = null
+      foo(myf)
+    }
+  }
 }
