@@ -1,0 +1,4 @@
+<plugin>
+  <name>workaround9871</name>
+  <classname>by.xeno.workaround9871.Plugin</classname>
+</plugin>
