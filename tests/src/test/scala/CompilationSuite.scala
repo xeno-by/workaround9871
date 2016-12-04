@@ -23,6 +23,11 @@ class CompilationSuite extends FunSuite {
     // see tests/src/main/scala
   }
 
+  test("normal code compiles with the plugin") {
+    val compilationResult = compile("class C")
+    assert(compilationResult === "")
+  }
+
   private def compile(code: String): String = {
     def fail(msg: String) = sys.error(s"Compiler initialization failed: $msg")
     val options = "-cp " + System.getProperty("sbt.paths.scalalibrary.classes")
